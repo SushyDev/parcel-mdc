@@ -12,22 +12,20 @@
 @include button.core-styles;
 @include icon-button.core-styles;
 
-body {
-    margin: 0;
-    padding: 0;
-
-    .mdc-top-app-bar {
-        z-index: 7;
-    }
-}
+@import '@material/button';
+@import '@material/icon-button';
+@import '@material/textfield/mdc-text-field';
+@import '@material/top-app-bar/mdc-top-app-bar';
+@import '@material/drawer';
+@import '@material/list';
 
 :root {
-    --mdc-theme-primary: #58c8eb;
-    --mdc-theme-secondary: #f192cd;
-    --mdc-theme-background: #ffffff;
-    --drawer-selected: rgba(255, 168, 253, 0.12);
+    --theme-primary: #56c8eb;
+    --theme-secondary: #f192cd;
+    --el0: #ffffff;
     --el1: #bdbdbd;
     --el2: #eeeeee;
+    --el3: #e9e9e9;
     --drawer-bg: #eeeeee;
     --btn-color: #cccccc;
     --color: #404040;
@@ -36,14 +34,44 @@ body {
 }
 
 [data-theme='dark'] {
-    --mdc-theme-primary: #58c8eb;
-    --mdc-theme-secondary: #f192cd;
-    --mdc-theme-background: #121212;
-    --el1: #bdbdbd;
-    --el2: #1d1d1d;
+    --theme-primary: #56c8eb;
+    --theme-secondary: #f192cd;
+    --el1: #121212;
+    --el2: #bdbdbd;
+    --el3: #1d1d1d;
     --drawer-bg: #212121;
     --btn-color: #ffffff;
     --color: #ffffff;
     --light-color: #ffffff;
     --dark-color: #000000;
+}
+
+* {
+    user-select: none;
+}
+
+body {
+    --mdc-theme-primary: var(--theme-primary);
+    margin: 0;
+    padding: 0;
+
+    .mdc-top-app-bar {
+        z-index: 7;
+    }
+
+    .mdc-drawer {
+        .mdc-list-item--activated {
+            color: var(--theme-primary);
+
+            .mdc-list-item__graphic {
+                color: var(--theme-primary);
+            }
+        }
+    }
+
+    .main-content {
+        button {
+            margin: 12px;
+        }
+    }
 }
