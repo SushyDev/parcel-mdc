@@ -7,9 +7,8 @@
     "start": "parcel src/html/*.html",
     "build": "parcel build src/html/*.html --out-dir docs --public-url ./"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "SushyDev",
+  "license": "GPL-3.0",
   "devDependencies": {
     "@babel/core": "^7.12.9",
     "@babel/preset-env": "^7.12.7",
