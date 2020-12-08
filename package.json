@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "parcel src/html/*.html --bundle-node-modules",
+    "start": "parcel src/html/*.html",
     "build": "parcel build src/html/*.html --out-dir docs --public-url ./"
   },
   "keywords": [],
@@ -20,6 +20,11 @@
     "material-components-web": "^8.0.0",
     "parcel-bundler": "^1.12.4",
     "sass": "^1.30.0"
+  },
+  "sass": {
+    "includePaths": [
+      "./node_modules"
+    ]
   },
   "babel": {
     "presets": [
