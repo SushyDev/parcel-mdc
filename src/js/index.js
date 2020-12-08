@@ -2,8 +2,6 @@ import {MDCTopAppBar} from '@material/top-app-bar/index';
 import {MDCRipple} from '@material/ripple';
 import {MDCDrawer} from '@material/drawer';
 
-
-
 import {MDCDialog} from '@material/dialog';
 
 import {MDCList} from '@material/list';
